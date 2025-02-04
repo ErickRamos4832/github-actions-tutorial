@@ -10,11 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PLATAFORMA: "AWS"
-      REGION: "us-east-1"
     steps:
-      - name: Mostrar Variables
+      - name: Mostrar Plataforma solo si es AWS
+        if: env.PLATAFORMA == ' AWS '
         run:
-          echo "Plataforma:$PLATAFORMA"
-          echo "Region:$REGION"
+          echo "La Plataforma es AWS "
           
 
