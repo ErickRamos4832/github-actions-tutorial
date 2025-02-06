@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Mostrar Informacion del evento
         run: |
-          echo "API Key: secrets.API_KEY"
+          echo "Repositorio: ${{ github.repository }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Evento: ${{ github.event_name }}"
           
 
